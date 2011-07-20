@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta name="dtb:uid" content="http://www.hxa7241.org/articles/content/epup-guide_hxa7241_2007_1.epub" />
+  </head>
+  <docTitle>
+    <text>Instructions</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="cover" playOrder="1">
+      <navLabel>
+        <text>Cover</text>
+      </navLabel>
+      <content src="cover.xhtml" />
+    </navPoint>
+    <navPoint id="pg002" playOrder="2">
+      <navLabel>
+        <text>Story</text>
+      </navLabel>
+      <content src="page002.xhtml" />
+    </navPoint>
+  </navMap>
+</ncx>
+

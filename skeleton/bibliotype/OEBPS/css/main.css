@@ -1,0 +1,426 @@
+/*  -------------------------------------------
+
+    ===========================================
+                B I B L I O T Y P E
+                         *
+           BASE BOOK / LONGFORM TYPOGRAPHY
+               FOR TABLET COMPUTERS
+    = = = = = = = = = = = = = = = = = = = = = = 
+              &copy; 2011, Craig Mod 
+                http://craigmod.com
+               http://bibliotype.org
+  
+             Released under MIT LICENSE
+         (Not that HTML + CSS + simple JS 
+        really needs a license. But, still, 
+                use without worry.)
+                
+    - - - 
+    
+    Permission is hereby granted, free of charge, to 
+    any person obtaining a copy of this software and 
+    associated documentation files (the "Software"), 
+    to deal in the Software without restriction, including 
+    without limitation the rights to use, copy, modify, 
+    merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom 
+    the Software is furnished to do so, subject to the 
+    following conditions:
+    
+    The above copyright notice and this permission notice 
+    shall be included in all copies or substantial portions 
+    of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF 
+    ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
+    TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+    PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+    DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
+    CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
+    CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
+    IN THE SOFTWARE.
+
+                
+    ------------------------------------------- */    
+
+
+
+/*  -------------------------------------------
+    CSS RESET
+    ------------------------------------------- */    
+    body,menu,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+      margin:0; padding:0; 
+      }
+      
+    table { border-collapse:collapse; border-spacing:0; }
+    fieldset,img { border:0; }
+    address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal; }
+    em { font-style: italic; }
+    strong { font-weight: bold; }
+    ol,ul { list-style:none; }
+    caption,th { text-align:left; }
+    h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
+    q:before,q:after { content:''; }
+    abbr,acronym { border:0; }
+    a { color: #ce1b1b; text-decoration: none; }
+    a:hover { color: #000; border-bottom: 1px solid #f00; }
+
+
+    
+    
+    /* Keep our sup's in line */
+    sup,
+    sub {
+    	height: 0;
+    	line-height: 1;
+    	vertical-align: baseline;
+    	position: relative;
+      }
+    
+    sup {
+    	bottom: 1ex;
+      }
+
+
+/*  GENERAL
+    ------------------------------------------- */
+    body { 
+      font-size: 62.5%; /* -- Sets 1em to equal 10px -- */ 
+      background: none top center repeat-y;
+      }
+      
+      /* SERIF / SANS */
+      body.georgia    { font-family: Georgia; }
+      body.helvetica  { font-family: Helvetica; }
+
+      /* CONTRAST */
+      body.high { background-color: #ffffff; color: #444; }
+      body.low  { background-color: #e5e0d4; color: #333; }
+
+      /* JUSTIFICATION */
+      body.justified .body_text p  { text-align: justify; }
+      body.ragged .body_text p     { text-align: left; }
+
+        /* Don't justify the closing fleuron */
+        body.ragged p.closing, body.justified p.closing { text-align: center !important; }
+
+    
+    #content_container, #menu_wrap { margin: 0 auto; border: 0px; }
+      #menu_wrap { width: 600px; top:0; }
+
+
+    /* FIRST PARAGRAPH */
+    .fp               { text-indent: 0em !important; }
+    .fp:first-letter  { float: left; display: block; }
+    
+      /*  Potentially more effecient (no class necessary) 
+          markup for first paragraph drop caps styling      */
+      /*
+      .body_text p:first-child { text-index: 0em !important; }
+      .body_text p:first-child:first-letter { float: left; display: inline; }
+      */
+    
+    /* TITLE BLOCK */ 
+    
+    #title_block { text-align: center !important; }
+      .fleuron                  { text-indent: 0 !important; }
+
+    
+    /* SMALL CAPS */
+    /* We do small caps this way because not every font has real small caps — and the computed
+       small caps is often too thin. Tnis is a hack and eventually, once opentype fonts and typekit
+       become more pervasive, we'll be able to drop back to using real, CSS defined small caps. 
+       Can't wait! For now, this: */
+    .sc { font-size: .9em; text-transform: uppercase; letter-spacing: .1em; }
+    
+    .not_tablet { display: none; }
+    
+    header { 
+      text-align: center; 
+      padding-top: 2em; 
+      font-family: Helvetica; 
+      font-size: .7em; 
+      text-transform: uppercase; 
+      color: #999; 
+      letter-spacing: 1px; 
+      text-shadow: 1px 1px 1px #efefef; 
+      padding-bottom: 2em; 
+      border-bottom: 1px solid #cfcfcf; 
+      }
+      
+    .footnotes { font-size: .7em; border-top: 1px dotted #ccc; padding-top: 2em; margin-top: 2em; color: #666; font-family: Helvetica; }
+      .footnotes li { margin-bottom: 1em; }
+        .footnotes li p:first-child { text-indent: 0; }
+        .footnotes li p:first-child:before { content: '¶ '; font-size: .8em; float: left; width: 10px; margin-left: 0px; }
+      .footnotes li:last-child { margin-bottom: 0px; } 
+      .footnotes h1 { text-transform: uppercase; font-family: Georgia; display: inline; font-size: .8em; letter-spacing: 1px; font-weight: normal; margin-bottom: 0px; padding-bottom: 0px; line-height: 1em; }
+      .footnotes h4 { font-weight: bold; float: left; display: inline; }
+      
+    footer { 
+      text-align: center;
+      font-family: Georgia;
+      font-style: italic;
+      text-shadow: 1px 1px 1px #efefef; 
+      font-size: 12px;
+      padding-top: 2em;
+      margin-bottom: 2em;
+      color: #999;
+      margin-top: 8em; 
+      border-top: 1px solid #cfcfcf; 
+      }
+
+    p.closing { 
+      text-align: center; 
+      margin-top: 1em; 
+      text-indent: 0px !important; 
+      font-size: 1.6em;
+      color: #777;
+      text-shadow: 1px 1px 1px #efefef; 
+      }
+
+/*  Computer / non-tablet specifications 
+    ------------------------------------------- */
+    @media screen and (min-device-width: 1025px) {
+      
+      header                  { text-align: center !important; margin-top: 10px; font-size: 12px; }
+      .not_tablet             { display: inline; float: left; width: 100%; margin-top: 20px; margin-bottom: 50px; text-align: center; color: #999; }
+        .not_tablet h1.bibliotype { margin: 0 auto 30px auto; display: block; width: 255px; height: 60px; text-overflow: hidden; background: transparent url(../images/h1-bibliotype.png) top left no-repeat; text-indent: -9000px; }
+        .not_tablet .instructions { border-bottom: 0px dotted #bbb; padding: 0 0 20px 0; }
+        .not_tablet .alert    { font-size: 10px; text-transform: uppercase; letter-spacing: 2px; }
+
+      /* No grid for desktop — size indeterminate */
+      ul.grid                 { display: none; }
+
+      h3                      { font-weight: normal; font-style: italic; }
+      h2                      { font-size: .8em; letter-spacing: 1px; text-transform: uppercase; }
+      footer                  { margin-bottom: 2em; }
+
+      .bed                    { width: 460px; }
+      .georgia .bed           { font-size: 1.6em; }
+      .helvetica .bed         { font-size: 1.5em; }
+      .georgia .bed p         { text-indent: 1em; line-height: 1.4em; }
+      .helvetica .bed p       { text-indent: 1em; line-height: 1.4em; }
+      .bed #title_block       { margin-bottom: 5em; margin-top: 4em; }
+      .bed #title_block img   { margin-top: 1.8em; width: 200px; }
+      .georgia .bed .fp:first-letter   { font-size: 3.3em; line-height: .95em; margin-top: -.04em; margin-right: .15em; }
+      .helvetica .bed .fp:first-letter { font-size: 3.3em; line-height: .95em; margin-right: .15em; }
+      .bed blockquote         { margin-top: 1.5em; margin-bottom: 1.5em; margin-left: 1em; margin-right: 1em; font-style: italic; color: #666; }
+
+      .knee                    { width: 560px; } 
+      .georgia .knee           { font-size: 1.7em; }
+      .georgia .knee p         { text-indent: 1.5em; line-height: 1.45em; }
+      .helvetica .knee         { font-size: 1.7em; }
+      .helvetica .knee p       { text-indent: 1.5em; line-height: 1.35em; }
+      .knee #title_block       { margin-bottom: 5em; margin-top: 3em; }
+      .knee #title_block img   { margin-top: 1.8em; width: 300px; }
+      .georgia .knee .fp:first-letter   { font-size: 3.5em; line-height: .95em; margin-top: -.02em; margin-right: .15em; }
+      .helvetica .knee .fp:first-letter { font-size: 3.1em; line-height: .95em; margin-right: .15em; }
+      .knee blockquote         { margin-top: 1.5em; margin-bottom: 1.5em; margin-left: 1.5em; margin-right: 1.5em; font-style: italic; color: #666; }
+    
+    
+      .breakfast                  { width: 800px; }
+      .georgia .breakfast         { font-size: 3.2em; }
+      .helvetica .breakfast       { font-size: 3.2em; }
+      .georgia .breakfast p       { text-indent: 2em; line-height: 1.3em; }
+      .helvetica .breakfast p     { text-indent: 2em; line-height: 1.3em; }
+      .breakfast #title_block     { margin-bottom: 5em; margin-top: 2em;}
+      .breakfast #title_block img { margin-top: 1.8em; }
+      .georgia .breakfast .fp:first-letter   { font-size: 3.1em; line-height: 1em; margin-top: -.05em; margin-right: .15em; }
+      .helvetica .breakfast .fp:first-letter { font-size: 3.1em; line-height: .95em; margin-right: .15em; }
+      .breakfast blockquote       { margin-top: 1.5em; margin-bottom: 1.5em; margin-left: 2em; margin-right: 2em; font-style: italic; color: #666; }
+    }
+    
+    
+/*  Portrait Specifications
+    ------------------------------------------- */
+    @media screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+      .not_tablet { display: none; }
+      header     { font-size: 10px; }
+
+      .bg_grid { background: url(../images/background_guides-port-top_clip.png) -20px left no-repeat fixed; }
+
+      .bed                    { width: 460px; }
+      .georgia .bed           { font-size: 1.6em; }
+      .helvetica .bed         { font-size: 1.5em; }
+      .georgia .bed p         { text-indent: 1em; line-height: 1.4em; }
+      .helvetica .bed p       { text-indent: 1em; line-height: 1.4em; }
+      .bed h2                 { line-height: 1.2em; font-size: .8em; letter-spacing: .1em; }
+      .bed h3                 { font-weight: normal; font-style: italic; }
+      .bed #title_block       { margin-bottom: 4em; margin-top: 6em; }
+      .bed #title_block img   { margin-top: 1.8em; width: 200px; }
+      .bed blockquote         { margin-top: 1.5em; margin-bottom: 1.5em; margin-left: 1.5em; margin-right: 1.5em; font-style: italic; color: #666; }
+      .georgia .bed .fp:first-letter   { font-size: 3.2em; line-height: .95em; margin-top: -.04em; margin-right: .15em; }
+      .helvetica .bed .fp:first-letter { font-size: 3.11em; line-height: .95em; margin-right: .15em; }
+
+
+      .knee                    { width: 560px; } 
+      .georgia .knee           { font-size: 2.0em; }
+      .georgia .knee p         { text-indent: 1.5em; line-height: 1.4em; }
+      .helvetica .knee         { font-size: 1.9em; }
+      .helvetica .knee p       { text-indent: 1.5em; line-height: 1.35em; }
+      .knee h2                 { line-height: 1.2em; font-size: .8em; letter-spacing: .1em; }
+      .knee h3                 { font-weight: normal; font-style: italic; }
+      .knee #title_block       { margin-bottom: 3em; margin-top: 4em; }
+      .knee #title_block img   { margin-top: .7em; width: 250px; }
+      .knee blockquote         { margin-top: 1.5em; margin-bottom: 1.5em; margin-left: 1.5em; margin-right: 1.5em; font-style: italic; color: #666; }
+      .georgia .knee .fp:first-letter   { font-size: 3.4em; line-height: .95em; margin-top: -.02em; margin-right: .15em; }
+      .helvetica .knee .fp:first-letter { font-size: 3.05em; line-height: .95em; margin-right: .15em; }
+
+
+      .breakfast                  { width: 700px; }
+      .georgia .breakfast         { font-size: 3.2em; }
+      .helvetica .breakfast       { font-size: 3.2em; }
+      .georgia .breakfast p       { text-indent: 2em; line-height: 1.3em; }
+      .helvetica .breakfast p     { text-indent: 2em; line-height: 1.3em; }
+      .breakfast h2               { line-height: 1.2em; font-size: .8em; letter-spacing: .1em; }
+      .breakfast h3               { font-weight: normal; font-style: italic; }
+      .breakfast #title_block     { margin-bottom: 1.5em; margin-top: 2em; }
+      .breakfast #title_block img { margin-top: .7em; width: 350px; }
+      .breakfast blockquote       { margin-top: 1.5em; margin-bottom: 1.5em; margin-left: 2em; margin-right: 2em; font-style: italic; color: #666; }
+      .georgia .breakfast .fp:first-letter   { font-size: 3.1em; line-height: 1em; margin-top: -.05em; margin-right: .15em; }
+      .helvetica .breakfast .fp:first-letter { font-size: 2.8em; line-height: .95em; margin-right: .15em; }
+
+    }
+
+
+/*  Landscape Specifications
+    ------------------------------------------- */
+    @media screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+
+      .not_tablet { display: none; }
+      header      { font-size: 10px; }
+      
+      .bg_grid { background: url(../images/background_guides-top_clip.png) -20px left no-repeat fixed; }
+
+      .bed                    { width: 460px; }
+      .georgia .bed           { font-size: 1.6em; }
+      .helvetica .bed         { font-size: 1.5em; }
+      .bed p                  { text-indent: 1em; line-height: 1.4em; }
+      .bed h2                 { line-height: 1.4em; letter-spacing: .1em; font-size: .8em; }
+      .bed h3                 { line-height: 1.2em; font-size: 1.2em; font-weight: normal; font-style: italic; }
+      .bed #title_block       { margin-bottom: 3.5em; margin-top: 3.4em; }
+      .bed #title_block img   { margin-top: 1.2em; width: 230px; }
+      .bed .body              { margin-bottom: 14em; }
+      .bed blockquote         { margin-top: 1.5em; margin-bottom: 1.5em; margin-left: 1em; margin-right: 1em; font-style: italic; color: #666; }
+      .georgia .bed .fp:first-letter   { font-size: 3.3em; line-height: .95em; margin-top: -.02em; margin-right: .15em; }
+      .helvetica .bed .fp:first-letter { font-size: 3.1em; line-height: .95em; margin-top: .02em; margin-right: .15em; }
+
+      .knee                    { width: 600px; } 
+      .georgia .knee           { font-size: 2.0em; }
+      .georgia .knee p         { text-indent: 1.5em; line-height: 1.45em; }
+      .helvetica .knee         { font-size: 1.9em; }
+      .helvetica .knee p       { text-indent: 1.5em; line-height: 1.35em; }
+      .knee h2                 { line-height: 1.4em; letter-spacing: .1em; font-size: .8em; }
+      .knee h3                 { line-height: 1.2em; font-style: italic; font-weight: normal; }
+      .knee #title_block       { margin-bottom: 3em; margin-top: 4em; }
+      .knee #title_block img   { margin-top: 1.2em; width: 250px; }
+      .knee .body              { margin-bottom: 9em; }
+      .knee blockquote         { margin-top: 1.5em; margin-bottom: 1.5em; margin-left: 1.5em; margin-right: 1.5em; font-style: italic; color: #666; }
+      .georgia .knee .fp:first-letter   { font-size: 3.3em; line-height: .95em; margin-top: -.02em; margin-right: .15em; }
+      .helvetica .knee .fp:first-letter { font-size: 3em; line-height: .95em; margin-right: .15em; }
+
+      .breakfast                  { width: 850px; } 
+      .georgia .breakfast         { font-size: 3em; }
+      .helvetica .breakfast       { font-size: 3em; }
+      .georgia .breakfast p       { text-indent: 2em; line-height: 1.35em; }
+      .helvetica .breakfast p     { text-indent: 2em; line-height: 1.3em; }
+      .breakfast h2               { line-height: 1.4em; letter-spacing: .1em; font-size: .8em; }
+      .breakfast h3               { line-height: 1.2em; font-weight: normal; font-style: italic; }
+      .breakfast #title_block     { margin-bottom: 2em; margin-top: 1.4em; }
+      .breakfast #title_block img { margin-top: .9em; width: 300px; }
+      .breakfast .body            { margin-bottom: 7em; }
+      .breakfast blockquote         { margin-top: 1.5em; margin-bottom: 1.5em; margin-left: 2em; margin-right: 2em; font-style: italic; color: #666; }
+      .georgia .breakfast .fp:first-letter   { font-size: 3.2em; line-height: .95em; margin-top: -.02em; margin-right: .15em; }
+      .helvetica .breakfast .fp:first-letter { font-size: 3.1em; line-height: .95em; margin-right: .15em; }
+    }
+
+    
+    
+/*  MENU
+    ------------------------------------------- */
+    #menu_tab { 
+      position: fixed; 
+      top: 0; 
+      left: 20px; 
+      width: 100px; 
+      font-size: 12px;  
+      background-color: #dad5ca; 
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 1px; 
+      padding-top: 20px; 
+      font-weight: bold;
+      text-shadow: 1px 1px 1px #fff;
+      padding-bottom: 20px; 
+      text-align: center; 
+      border: 1px solid #cfcbc0;
+      border-top: 0px;
+      -webkit-border-bottom-right-radius: 5px;
+      -webkit-border-bottom-left-radius: 5px;
+      -webkit-box-shadow: 0 1px 2px #bbb;
+      z-index: 300;
+      }
+      
+      #menu_tab:hover { cursor: pointer; color: #666; }
+    
+    menu {
+      display: none;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 400px;
+      font-size: 1em;
+      min-width: 400px;
+      border: 1px solid #999; 
+      border-top: none; 
+      padding: 12px 20px 20px 20px; 
+      margin-bottom: 20px; 
+      font-family: Helvetica; text-transform: uppercase; letter-spacing: 1px;
+      text-align: center;
+      background-color: #f5f1e8;
+      -webkit-border-bottom-right-radius: 5px;
+      -webkit-border-bottom-left-radius: 0px;
+      -webkit-box-shadow: 0 2px 2px #cfcabf;
+      }
+      
+      menu h1 { float: right; margin-bottom: 20px; margin-right: 10px; display: block; width: 255px; height: 60px; text-overflow: hidden; background: transparent url(../images/h1-bibliotype.png) top left no-repeat; text-indent: -9000px; }
+      
+      menu ul { clear: both; margin: 0px auto; width: 100%; margin-left: 20px; text-align: left; }
+        menu ul.contrast, menu ul.text_type, menu ul.family, menu ul.sizes, menu ul.grid { margin-bottom: 20px; } 
+      
+      menu li { 
+        border: 1px solid #bbb;
+        height: 10px;
+        float: left;
+        display: inline; 
+        margin-right: 10px; 
+        margin-bottom: 10px;
+        font-family: Georgia;
+        padding: 5px 15px 8px 15px;
+        -webkit-border-radius: 3px;
+        background-color: #dfdfdf;
+        text-shadow: 1px 1px 0px #dedede;
+        color: #888;
+        }
+        
+        menu li:hover { cursor: pointer; background-color: #eee; }
+    
+        li.highlight { color: #888; font-weight: normal; letter-spacing: 1px; text-shadow: 1px 1px 0px #dedede; background-color: #fff; border: 1px solid #bbb; box-shadow: 1px 1px 2px #000; }        
+    
+        menu li.desc { 
+          border: 0px; 
+          display: block; 
+          float: left; 
+          background: transparent; 
+          width: 80px; 
+          font-weight: bold; 
+          text-align: right;
+          color: #666;
+          font-family: Helvetica;
+          text-shadow: 1px 1px 0px #fff;
+          }
+          menu li.desc:hover { cursor: default; }
+        
+      menu #menu_footer { float: right; font-size: 10px; margin-top: 10px; margin-right: 20px; padding-top: 10px; color: #bbb; }
+      menu #menu_footer a { text-transform: none; letter-spacing: 0px; font-size: 12px; color: #999; }

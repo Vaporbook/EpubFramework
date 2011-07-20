@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="PrimaryID">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+<!-- required metadata: -->
+    <dc:identifier opf:scheme="URN" id="PrimaryID"></dc:identifier>
+    <dc:title></dc:title>
+    <dc:language>en-US</dc:language>
+<!-- optional metadata: -->
+    <dc:creator opf:role="aut"></dc:creator>
+    <dc:date opf:event="ops-publication">2009-10-21</dc:date>
+    <dc:date opf:event="original-publication">2009-10-21</dc:date>
+    <dc:description></dc:description>
+    <dc:publisher></dc:publisher>
+<!-- specify canonical cover image by idref -->
+	  <meta name="cover" content="cover-image"/>
+  </metadata>
+  <manifest>
+<!-- ncx document -->
+    <item id="ncx" href="index.ncx" media-type="application/x-dtbncx+xml"/>
+<!-- content documents -->
+    <item id="toc" href="OEBPS/index.html" media-type="application/xhtml+xml"/>
+    <item id="cover" href="OEBPS/cover.html" media-type="application/xhtml+xml"/>
+<!-- other assets -->
+    <item id="cover-image" href="OEBPS/images/cover.png" media-type="image/png"/>
+    <item id="main-stylesheet" href="OEBPS/css/main.css" media-type="text/css"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover" linear="yes"/>
+    <itemref idref="toc" linear="yes"/>
+  </spine>
+</package>

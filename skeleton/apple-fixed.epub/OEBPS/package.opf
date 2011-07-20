@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="PrimaryID" version="2.0">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:title>Instructions</dc:title>
+    <dc:identifier id="PrimaryID" opf:scheme="ISBN">9780062065575</dc:identifier>
+    <dc:creator opf:role="aut" opf:file-as="Kevin Henkes">Neil Gaiman</dc:creator>
+    <dc:publisher>HarperCollins</dc:publisher>
+    <dc:date opf:event="publication">2011</dc:date>
+    <dc:rights>Copyright © 2010 by Neil Gaiman</dc:rights>
+    <dc:language>en</dc:language>
+    <meta name="cover" content="imgcov" />
+  </metadata>
+  <manifest>
+    <!--supplementary -->
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+    <item id="css" href="stylesheet.css" media-type="text/css" />
+    <item id="cov" href="cover.xhtml" media-type="application/xhtml+xml" />
+    <!--fonts-->
+    <item id="font1" href="fonts/WEISS-IT.OTF" media-type="application/x-font-otf" />
+    <item id="font2" href="fonts/WEISS.OTF" media-type="application/x-font-otf" />
+    <item id="font3" href="fonts/GOTHAM-B.OTF" media-type="application/x-font-otf" />
+    <item id="font4" href="fonts/P22PANAR.OTF" media-type="application/x-font-otf" />
+    <item id="font5" href="fonts/CHARTBTR.OTF" media-type="application/x-font-otf" />
+    <!--content-->
+    <item id="pg002" href="page002.xhtml" media-type="application/xhtml+xml" />
+    <item id="pg003" href="page003.xhtml" media-type="application/xhtml+xml" />
+    <item id="pg004" href="page004.xhtml" media-type="application/xhtml+xml" />
+    <!--images-->
+    <item id="imgcov" href="images/cover.jpg" media-type="image/jpeg" />
+    <item id="img001" href="images/02-03.jpg" media-type="image/jpeg" />
+    <item id="img002" href="images/04-05.jpg" media-type="image/jpeg" />
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cov" />
+    <itemref idref="pg002" />
+    <itemref idref="pg003" />
+    <itemref idref="pg004" />
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="cover.xhtml" />
+    <reference type="text" title="Story" href="page002.xhtml" />
+  </guide>
+</package>
+

@@ -1,0 +1,161 @@
+@font-face { 
+	font-family: "WEISS"; 
+	font-style: normal;
+	font-weight: normal; 
+	src: url(fonts/WEISS.OTF); 
+}
+@font-face { 
+	font-family: "WEISS-IT"; 
+	font-style: italic;
+	font-weight: normal; 
+	src: url(fonts/WEISS-IT.OTF); 
+}
+@font-face { 
+	font-family: "GOTHAM-B"; 
+	font-style: normal;
+	font-weight: bold; 
+	src: url(fonts/GOTHAM-B.OTF); 
+}
+@font-face { 
+	font-family: "P22PANAR"; 
+	font-style: normal;
+	font-weight: normal; 
+	src: url(fonts/P22PANAR.OTF); 
+}
+@font-face { 
+	font-family: "CHARTBTR"; 
+	font-style: normal;
+	font-weight: normal; 
+	src: url(fonts/CHARTBTR.OTF); 
+}			
+
+body { width: 1125px; height: 1200px; /*border: thin black solid;*/ }
+
+em, i { font-family: "WEISS-IT"; }
+
+body > div { position: relative; overflow: hidden; width: 1125px; height: 1200px; }
+
+img { position: absolute; height: 1200px; }
+
+.coverimage { width:100%; height: 1200px; }
+
+p { font-family: "WEISS"; color: #000000; position: absolute; width: 1000px; 
+}
+
+.page002, .page003, .page004, .page005, .page006, .page007, .page008, .page009, .page010, .page011, .page012, .page013, .page014, .page015, .page016, .page017, .page018, .page019, .page020, .page021, .page022, .page023, .page024, .page025, .page026, .page027, .page028, .page029, .page030, .page031, .page032, .page033, .page034, .page035, .page036, .page037, .page038, .page039, .page040, .page041, .back { 
+        width: 1125px; height: 1200px; overflow: hidden; position: relative;
+}
+.page002 > img, .page003 > img, .page004 > img, .page005 > img, .page006 > img, .page007 > img, .page008 > img, .page009 > img, .page010 > img, .page011 > img, .page012 > img, .page013 > img, .page014 > img, .page015 > img, .page016 > img, .page017 > img, .page018 > img, .page019 > img, .page020 > img, .page021 > img, .page022 > img, .page023 > img, .page024 > img, .page025 > img, .page026 > img, .page027 > img, .page028 > img, .page029 > img, .page030 > img, .page031 > img, .page032 > img, .page033 > img, .page034 > img, .page035 > img, .page036 > img, .page037 > img, .page038 > img, .page039 > img, .page040 > img, .page041 > img, .back > img {
+        width: auto; height: 100%;
+}
+.page003 > img, .page005 > img, .page007 > img, .page009 > img, .page011 > img, .page013 > img, .page015 > img, .page017 > img, .page019 > img, .page021 > img, .page023 > img, .page025 > img, .page027 > img, .page029 > img, .page031 > img, .page033 > img, .page035 > img, .page037 > img, .page039 > img, .page041 > img { 
+        left: -100%;
+}
+
+.page004-text > p { font-family: "P22PANAR"; padding: 80px 0 0 70px; font-size: 57px; text-align: center; letter-spacing: 4px; }
+.page004a-text > p { font-family: "P22PANAR"; padding: 110px 0 0 60px; font-size: 140px; text-align: center; }
+.page004b-text > p { font-family: "P22PANAR"; padding: 380px 0 0 70px; font-size: 57px; text-align: center;  letter-spacing: 4px; }
+.page004c-text > p { padding: 560px 0 0 70px; font-size: 20px; text-align: center;  line-height: 27px; }
+.page004d-text > p { font-family: "GOTHAM-B"; padding: 960px 0 0 70px; font-size: 20px; text-align: center;   }
+.page004e-text > p { font-family: "WEISS"; padding: 990px 0 0 70px; font-size: 15px; text-align: center;   }
+
+.page006-text > p { margin-left: 340px; top: 210px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+
+.page007-text > p { margin-left: 330px; top: 980px; font-size: 30px; line-height: 40px; }
+
+.page009-text > p { margin-left: 555px; top: 1015px; font-size: 30px; line-height: 40px; }
+
+.page010-text > p { margin-left: 160px; top: 90px; font-size: 30px; line-height: 40px; text-indent: -50px; width: 520px; }
+.page010a-text > p { margin-left: 110px; top: 170px; font-size: 30px; line-height: 40px; }
+.page010b-text > p { margin-left: 520px; top: 1050px; font-size: 30px; line-height: 40px; }
+
+.page011-text > p { margin-left: 430px; top: 835px; font-size: 30px; line-height: 40px; }
+.page011a-text > p { margin-left: 540px; top: 875px; font-size: 30px; line-height: 40px; }
+.page011b-text > p { margin-left: 625px; top: 915px; font-size: 30px; line-height: 40px; }
+
+.page012-text > p { margin-left: 330px; top: 750px; font-size: 30px; line-height: 40px; }
+
+.page013-text > p { margin-left: 406px; top: 1036px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+
+.page014-text > p { margin-left: 200px; top: 745px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+.page014a-text > p { margin-left: 150px; top: 825px; font-size: 30px; line-height: 40px; }
+.page014b-text > p { margin-left: 300px; top: 1020px; font-size: 30px; line-height: 40px; }
+
+.page016-text > p { margin-left: 350px; top: 635px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+.page016a-text > p { margin-left: 350px; top: 755px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+
+.page017-text > p { margin-left: 820px; top: 710px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+.page017a-text > p { margin-left: 770px; top: 870px; font-size: 30px; line-height: 40px; }
+.page017b-text > p { margin-left: 820px; top: 910px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+
+.page018-text > p { margin-left: 865px; top: 120px; font-size: 30px; line-height: 40px; }
+.page018a-text > p { margin-left: 865px; top: 240px; font-size: 30px; line-height: 40px; }
+.page018b-text > p { margin-left: 865px; top: 360px; font-size: 30px; line-height: 40px; }
+
+.page019-text > p { margin-left: 160px; top: 915px; font-size: 30px; line-height: 40px; }
+
+.page020-text > p { margin-left: 280px; top: 90px; font-size: 30px; line-height: 40px; }
+.page020a-text > p { margin-left: 330px; top: 165px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+
+.page021-text > p { margin-left: 380px; top: 90px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+.page021a-text > p { margin-left: 330px; top: 900px; font-size: 30px; line-height: 40px; }
+.page021b-text > p { margin-left: 380px; top: 940px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+.page021c-text > p { margin-left: 500px; top: 1060px; font-size: 30px; line-height: 40px; }
+
+.page022-text > p { margin-left: 100px; top: 300px; font-size: 30px; line-height: 40px; text-align: center; }
+
+.page023-text > p { margin-left: 65px; top: 50px; font-size: 30px; line-height: 40px; text-align: center; }
+.page023a-text > p { margin-left: 65px; top: 920px; font-size: 30px; line-height: 40px; text-align: center; }
+
+.page025-text > p { margin-left: 380px; top: 180px; font-size: 30px; line-height: 40px; }
+.page025a-text > p { margin-left: 380px; top: 220px; font-size: 30px; line-height: 40px; }
+.page025b-text > p { margin-left: 430px; top: 260px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+.page025c-text > p { margin-left: 380px; top: 340px; font-size: 30px; line-height: 40px; }
+
+.page026-text > p { margin-left: 420px; top: 120px; font-size: 30px; line-height: 40px; }
+.page026a-text > p { margin-left: 70px; top: 830px; font-size: 30px; line-height: 40px; text-align: center; }
+
+.page027-text > p { margin-left: 460px; top: 100px; font-size: 30px; line-height: 40px; }
+.page027a-text > p { margin-left: 440px; top: 140px; font-size: 30px; line-height: 40px; }
+.page027b-text > p { margin-left: 412px; top: 180px; font-size: 30px; line-height: 40px; }
+.page027c-text > p { margin-left: 388px; top: 220px; font-size: 30px; line-height: 40px; }
+.page027d-text > p { margin-left: 368px; top: 300px; font-size: 30px; line-height: 40px; }
+.page027e-text > p { margin-left: 352px; top: 380px; font-size: 30px; line-height: 40px; }
+.page027f-text > p { margin-left: 352px; top: 420px; font-size: 30px; line-height: 40px; }
+.page027g-text > p { margin-left: 365px; top: 460px; font-size: 30px; line-height: 40px; }
+.page027h-text > p { margin-left: 384px; top: 500px; font-size: 30px; line-height: 40px; }
+
+.page028-text > p { margin-left: 640px; top: 880px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+.page028a-text > p { margin-left: 640px; top: 960px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+
+.page029-text > p { margin-left: 400px; top: 100px; font-size: 30px; line-height: 40px; }
+
+.page031-text > p { margin-left: 120px; top: 100px; font-size: 30px; line-height: 40px; text-align: center; }
+
+.page032-text > p { margin-left: -200px; top: 200px; font-size: 30px; line-height: 40px; text-align: center; }
+
+.page035-text > p { margin-left: 150px; top: 200px; font-size: 30px; line-height: 40px; text-align: center; }
+
+.page036-text > p { margin-left: -120px; top: 70px; font-size: 30px; line-height: 40px; text-align: center; }
+
+.page037-text > p { margin-left: 550px; top: 810px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+.page037a-text > p { margin-left: 550px; top: 890px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+.page037b-text > p { margin-left: 550px; top: 970px; font-size: 30px; line-height: 40px; text-indent: -50px; }
+
+.page038-text > p { margin-left: 550px; top: 200px; font-size: 30px; line-height: 40px; }
+.page038a-text > p { margin-left: 550px; top: 320px; font-size: 30px; line-height: 40px; }
+.page038b-text > p { margin-left: 550px; top: 650px; font-size: 30px; line-height: 40px; }
+
+.page039-text > p { margin-left: 80px; top: 270px; width: 500px; font-size: 16px; line-height: 20px; }
+
+.page041-text > p { margin-left: 220px; top: 200px; font-size: 24px; line-height: 32px; width: 700px; text-align: justify; }
+.page041a-text > p { margin-left: 220px; top: 584px; font-size: 24px; line-height: 32px; width: 700px; text-align: justify; }
+
+.back-text > p { top: 487px; margin-left: 0px; width: 1125px; font-size: 25px; letter-spacing: 1px; text-align: center; line-height: 55px; }
+
+.author { font-family: "P22PANAR"; font-size: 36px; letter-spacing: 1px; }
+
+.italics { font-family: "WEISS"; font-style: italic; }
+
+.punct {font-family: "CHARTBTR"; }
+
