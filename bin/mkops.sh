@@ -16,5 +16,5 @@ DIR="ops-src/$NAME"
 
 echo "Extracting to $DIR..."
 mkdir "$DIR"
-unzip -d "$DIR" "epub-build/$NAME" 
+unzip -d "$DIR" "$1" 
 

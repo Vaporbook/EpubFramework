@@ -5,14 +5,14 @@ E_BADARGS=65
 
 if [ $# -ne $EXPECTED_ARGS ]
 then
-  echo "Usage: `basename $0` {OPS (epub) nam or path}"
+  echo "Usage: `basename $0` path/to/OPS [filename.epub]"
   exit $E_BADARGS
 fi
 
 MYDIR=`pwd`
 
 
-PKG="$MYDIR/ops-src/$1"
+PKG="$1"
 CONTAINER="$MYDIR/epub-build/`basename "$PKG"`.epub"
 
 
