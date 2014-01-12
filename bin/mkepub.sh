@@ -9,8 +9,11 @@ then
   exit $E_BADARGS
 fi
 
-MYDIR=`pwd`
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+echo $DIR
+
+MYDIR=$DIR/../
 
 PKG="$1"
 CONTAINER="$MYDIR/epub-build/`basename "$PKG"`.epub"

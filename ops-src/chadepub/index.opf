@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="PrimaryID">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+<!-- required metadata: -->
+    <dc:identifier opf:scheme="URN" id="PrimaryID">ASM_THE_CHAD-12-21-2013</dc:identifier>
+    <dc:title>The Chad</dc:title>
+    <dc:language>en-US</dc:language>
+<!-- optional metadata: -->
+    <dc:creator opf:role="aut">Aaron Steven Miller</dc:creator>
+    <dc:description></dc:description>
+    <dc:publisher></dc:publisher>
+<!-- specify canonical cover image by idref -->
+	  <meta name="cover" content="cover-image"/>
+  </metadata>
+  <manifest>
+<!-- ncx document -->
+    <item id="ncx" href="index.ncx" media-type="application/x-dtbncx+xml"/>
+<!-- content documents -->
+    <item id="toc" href="OEBPS/index.html" media-type="application/xhtml+xml"/>
+    <item id="cover" href="OEBPS/cover.html" media-type="application/xhtml+xml"/>
+    <item id="content" href="OEBPS/content.html" media-type="application/xhtml+xml"/>
+<!-- other assets -->
+    <item id="cover-image" href="OEBPS/images/cover.png" media-type="image/png"/>
+    <item id="main-stylesheet" href="OEBPS/css/main.css" media-type="text/css"/>
+    <item id="main-script" href="OEBPS/js/main.js" media-type="text/javascript"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover" linear="yes"/>
+    <itemref idref="toc" linear="yes"/>
+    <itemref idref="content" linear="yes"/>
+  </spine>
+</package>
